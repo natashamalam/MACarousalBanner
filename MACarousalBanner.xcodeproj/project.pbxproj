@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1F60687532DB924FE2650E14 /* Pods_MACarousalBanner.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE8822D75C9CFC82102AC057 /* Pods_MACarousalBanner.framework */; };
 		9B19D25A287AC3D30056C7D2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B19D259287AC3D30056C7D2 /* AppDelegate.swift */; };
 		9B19D263287AC3D40056C7D2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9B19D262287AC3D40056C7D2 /* Assets.xcassets */; };
 		9B19D266287AC3D40056C7D2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B19D264287AC3D40056C7D2 /* LaunchScreen.storyboard */; };
@@ -15,9 +16,12 @@
 		9B19D27F287B46710056C7D2 /* MACarousalViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B19D27E287B46710056C7D2 /* MACarousalViewModel.swift */; };
 		9B653FC6287BFB3700FE19AA /* MACarousalBannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B653FC5287BFB3700FE19AA /* MACarousalBannerView.swift */; };
 		9B653FC8287C25E300FE19AA /* MACarousalViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B653FC7287C25E300FE19AA /* MACarousalViewCell.swift */; };
+		AA02A91528863D070030F458 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AA02A91428863D070030F458 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3636A91E63376130B8E20B85 /* Pods-MACarousalBanner.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MACarousalBanner.release.xcconfig"; path = "Target Support Files/Pods-MACarousalBanner/Pods-MACarousalBanner.release.xcconfig"; sourceTree = "<group>"; };
+		4B5649846663F16AF2395DE8 /* Pods-MACarousalBanner.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MACarousalBanner.debug.xcconfig"; path = "Target Support Files/Pods-MACarousalBanner/Pods-MACarousalBanner.debug.xcconfig"; sourceTree = "<group>"; };
 		9B19D256287AC3D30056C7D2 /* MACarousalBanner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MACarousalBanner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B19D259287AC3D30056C7D2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9B19D262287AC3D40056C7D2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -28,6 +32,8 @@
 		9B19D27E287B46710056C7D2 /* MACarousalViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MACarousalViewModel.swift; sourceTree = "<group>"; };
 		9B653FC5287BFB3700FE19AA /* MACarousalBannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MACarousalBannerView.swift; sourceTree = "<group>"; };
 		9B653FC7287C25E300FE19AA /* MACarousalViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MACarousalViewCell.swift; sourceTree = "<group>"; };
+		AA02A91428863D070030F458 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		BE8822D75C9CFC82102AC057 /* Pods_MACarousalBanner.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MACarousalBanner.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +41,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1F60687532DB924FE2650E14 /* Pods_MACarousalBanner.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -46,6 +53,8 @@
 			children = (
 				9B19D258287AC3D30056C7D2 /* MACarousalBanner */,
 				9B19D257287AC3D30056C7D2 /* Products */,
+				A662EEC60ADE1A3C2A453A99 /* Pods */,
+				EB7343CDE338134141C96071 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -67,6 +76,7 @@
 				9B19D26F287AC4E10056C7D2 /* Controller */,
 				9B19D26D287AC48B0056C7D2 /* Resources */,
 				9B19D267287AC3D40056C7D2 /* Info.plist */,
+				AA02A91428863D070030F458 /* GoogleService-Info.plist */,
 			);
 			path = MACarousalBanner;
 			sourceTree = "<group>";
@@ -129,6 +139,24 @@
 			path = "View-model";
 			sourceTree = "<group>";
 		};
+		A662EEC60ADE1A3C2A453A99 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4B5649846663F16AF2395DE8 /* Pods-MACarousalBanner.debug.xcconfig */,
+				3636A91E63376130B8E20B85 /* Pods-MACarousalBanner.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		EB7343CDE338134141C96071 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BE8822D75C9CFC82102AC057 /* Pods_MACarousalBanner.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -136,9 +164,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9B19D26A287AC3D40056C7D2 /* Build configuration list for PBXNativeTarget "MACarousalBanner" */;
 			buildPhases = (
+				3FEA5FB6904A1E257D4A32D8 /* [CP] Check Pods Manifest.lock */,
 				9B19D252287AC3D30056C7D2 /* Sources */,
 				9B19D253287AC3D30056C7D2 /* Frameworks */,
 				9B19D254287AC3D30056C7D2 /* Resources */,
+				B19062D474975599A94447C4 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -189,10 +219,53 @@
 			files = (
 				9B19D266287AC3D40056C7D2 /* LaunchScreen.storyboard in Resources */,
 				9B19D263287AC3D40056C7D2 /* Assets.xcassets in Resources */,
+				AA02A91528863D070030F458 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3FEA5FB6904A1E257D4A32D8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MACarousalBanner-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B19062D474975599A94447C4 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MACarousalBanner/Pods-MACarousalBanner-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MACarousalBanner/Pods-MACarousalBanner-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MACarousalBanner/Pods-MACarousalBanner-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		9B19D252287AC3D30056C7D2 /* Sources */ = {
@@ -338,6 +411,7 @@
 		};
 		9B19D26B287AC3D40056C7D2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4B5649846663F16AF2395DE8 /* Pods-MACarousalBanner.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -365,6 +439,7 @@
 		};
 		9B19D26C287AC3D40056C7D2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3636A91E63376130B8E20B85 /* Pods-MACarousalBanner.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
