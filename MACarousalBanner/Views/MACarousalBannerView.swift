@@ -27,7 +27,7 @@ class MACarousalBannerView: UIView {
     
     let wrapperView: UIView = {
         let view = UIView()
-        view.backgroundColor = .lightGray
+        view.backgroundColor = .clear
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
@@ -45,14 +45,14 @@ class MACarousalBannerView: UIView {
     let leftArrowButton: UIButton = {
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
-        button.setImage(UIImage(named: "backwards"), for: .normal)
+        button.setImage(UIImage(named: "left_C"), for: .normal)
         return button
     }()
     
     let rightArrowButton: UIButton = {
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
-        button.setImage(UIImage(named: "forwards"), for: .normal)
+        button.setImage(UIImage(named: "right_C"), for: .normal)
         return button
     }()
     
