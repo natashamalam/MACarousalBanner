@@ -13,6 +13,14 @@ protocol MACarousalBannerViewDelegate: AnyObject {
 }
 
 class MACarousalBannerView: UIView {
+  
+    var abTestingPattern: String? {
+        didSet {
+            DispatchQueue.main.async {
+                self.setLeftAndRightIndicatorImage(forPattern: self.abTestingPattern)
+            }
+        }
+    }
     
     weak var delegate: MACarousalBannerViewDelegate?
     
@@ -68,6 +76,8 @@ class MACarousalBannerView: UIView {
         addSubViews()
     }
     
+    // MARK: - adding and configuring subViews
+    
     func addSubViews() {
         wrapperView.addSubview(leftArrowButton)
         wrapperView.addSubview(rightArrowButton)
@@ -76,18 +86,33 @@ class MACarousalBannerView: UIView {
         configureSubviews()
     }
     
-    override func layoutSubviews() {
-        super.layoutSubviews()
-        addLayOutConstraints()
-    }
-    
     func configureSubviews() {
         imageCollectionView.delegate = self
         imageCollectionView.dataSource = self
         imageCollectionView.isPagingEnabled = true
         imageCollectionView.register(MACarousalViewCell.self, forCellWithReuseIdentifier: "CarousalViewCell")
+        
+        setLeftAndRightIndicatorImage(forPattern: abTestingPattern)
         leftArrowButton.addTarget(self, action: #selector(moveBackwards), for: .touchUpInside)
         rightArrowButton.addTarget(self, action: #selector(moveForwards), for: .touchUpInside)
+    }
+    
+    func setLeftAndRightIndicatorImage(forPattern pattern: String?) {
+        guard let pattern = pattern else {
+            // user default image
+            return
+        }
+        let leftImageName = "left_" + pattern
+        let rightImageName = "right_" + pattern
+        
+        leftArrowButton.setImage(UIImage(named: leftImageName), for: .normal)
+        rightArrowButton.setImage(UIImage(named: rightImageName), for: .normal)
+    }
+    
+    // MARK: - layingOut  Constraints
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        addLayOutConstraints()
     }
     
     func addLayOutConstraints() {
@@ -116,6 +141,8 @@ class MACarousalBannerView: UIView {
         NSLayoutConstraint.activate(constraints)
     }
     
+    // MARK: - action methods
+    
     @objc func moveForwards() {
         guard let currentIndex = currentVisibleIndexpath?.row else {return}
         currentVisibleIndexpath = IndexPath(row: (currentIndex + 1), section: 0)
@@ -135,8 +162,9 @@ class MACarousalBannerView: UIView {
             delegate?.moveBackwards()
         }
     }
-    
 }
+
+// MARK: - CollectionView datatasource and delegate
 
 extension MACarousalBannerView: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     

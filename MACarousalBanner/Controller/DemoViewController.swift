@@ -8,22 +8,30 @@
 import UIKit
 
 class DemoViewController: UIViewController {
-
-    var list = [UIImage]()
-    let carousalBannerView = MACarousalBannerView()
+    var carousalBannerView: MACarousalBannerView!
     
     var carousalViewModel: MACarousalViewModel!
+    
+    let remoteConfigManager = RemoteConfigManager()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
         addCarousalView()
-        prepareDataSource()
-        carousalViewModel = MACarousalViewModel(list)
+        
+        carousalViewModel = MACarousalViewModel(dataSource())
         carousalBannerView.datasource = carousalViewModel.datasource
+        
+        remoteConfigManager.delegate = self
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        remoteConfigManager.fetchRemoteConfigValues()
     }
     
     func addCarousalView() {
+        carousalBannerView = MACarousalBannerView()
         carousalBannerView.delegate = self
         view.addSubview(carousalBannerView)
         addLayoutToCarousalView()
@@ -40,27 +48,31 @@ class DemoViewController: UIViewController {
         NSLayoutConstraint.activate(constraints)
     }
     
-    func prepareDataSource() {
-        var tempList = [UIImage?]()
+    func dataSource() -> [UIImage]{
+        var list = [UIImage?]()
         var count = 1
         while count < 6 {
             let name = "img_" + "\(count)"
             let image = UIImage(named: name)
-            tempList += [image]
+            list += [image]
             count += 1
         }
-        list = tempList.filter( { $0 != nil }).map({$0!})
+        return list.filter( { $0 != nil }).map({$0!})
     }
 }
 
 extension DemoViewController: MACarousalBannerViewDelegate {
-    func moveForwards() {
-        
+    func moveForwards() {}
+    
+    func moveBackwards() {}
+}
+
+extension DemoViewController: RemoteConfigManagerProtocol {
+    func didReiceveValues(_ response: RemoteConfigResponse?) {
+        guard let response = response,
+              let pattern = response.arrowPattern else {
+                  return
+              }
+        carousalBannerView.abTestingPattern = pattern
     }
-    
-    func moveBackwards() {
-        
-    }
-    
-    
 }

@@ -17,6 +17,8 @@
 		9B653FC6287BFB3700FE19AA /* MACarousalBannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B653FC5287BFB3700FE19AA /* MACarousalBannerView.swift */; };
 		9B653FC8287C25E300FE19AA /* MACarousalViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B653FC7287C25E300FE19AA /* MACarousalViewCell.swift */; };
 		AA02A91528863D070030F458 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AA02A91428863D070030F458 /* GoogleService-Info.plist */; };
+		AACEC61C28867A4B00C3E3FE /* RemoteConfigManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AACEC61B28867A4B00C3E3FE /* RemoteConfigManager.swift */; };
+		AACEC61E28867BFD00C3E3FE /* RemoteDataConfigModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AACEC61D28867BFD00C3E3FE /* RemoteDataConfigModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +35,8 @@
 		9B653FC5287BFB3700FE19AA /* MACarousalBannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MACarousalBannerView.swift; sourceTree = "<group>"; };
 		9B653FC7287C25E300FE19AA /* MACarousalViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MACarousalViewCell.swift; sourceTree = "<group>"; };
 		AA02A91428863D070030F458 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		AACEC61B28867A4B00C3E3FE /* RemoteConfigManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteConfigManager.swift; sourceTree = "<group>"; };
+		AACEC61D28867BFD00C3E3FE /* RemoteDataConfigModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteDataConfigModel.swift; sourceTree = "<group>"; };
 		BE8822D75C9CFC82102AC057 /* Pods_MACarousalBanner.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MACarousalBanner.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -70,9 +74,10 @@
 			isa = PBXGroup;
 			children = (
 				9B19D26E287AC4D30056C7D2 /* AppMain */,
-				9B19D271287AC4F20056C7D2 /* Model */,
-				9B19D270287AC4EB0056C7D2 /* Views */,
 				9B19D27D287B46520056C7D2 /* View-model */,
+				9B19D271287AC4F20056C7D2 /* Model */,
+				AACEC61A28867A2C00C3E3FE /* RemoteConfig */,
+				9B19D270287AC4EB0056C7D2 /* Views */,
 				9B19D26F287AC4E10056C7D2 /* Controller */,
 				9B19D26D287AC48B0056C7D2 /* Resources */,
 				9B19D267287AC3D40056C7D2 /* Info.plist */,
@@ -145,8 +150,16 @@
 				4B5649846663F16AF2395DE8 /* Pods-MACarousalBanner.debug.xcconfig */,
 				3636A91E63376130B8E20B85 /* Pods-MACarousalBanner.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		AACEC61A28867A2C00C3E3FE /* RemoteConfig */ = {
+			isa = PBXGroup;
+			children = (
+				AACEC61D28867BFD00C3E3FE /* RemoteDataConfigModel.swift */,
+				AACEC61B28867A4B00C3E3FE /* RemoteConfigManager.swift */,
+			);
+			path = RemoteConfig;
 			sourceTree = "<group>";
 		};
 		EB7343CDE338134141C96071 /* Frameworks */ = {
@@ -273,7 +286,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				9B19D275287AC90F0056C7D2 /* DemoViewController.swift in Sources */,
+				AACEC61C28867A4B00C3E3FE /* RemoteConfigManager.swift in Sources */,
 				9B19D279287ACD940056C7D2 /* MAChain.swift in Sources */,
+				AACEC61E28867BFD00C3E3FE /* RemoteDataConfigModel.swift in Sources */,
 				9B653FC6287BFB3700FE19AA /* MACarousalBannerView.swift in Sources */,
 				9B19D25A287AC3D30056C7D2 /* AppDelegate.swift in Sources */,
 				9B653FC8287C25E300FE19AA /* MACarousalViewCell.swift in Sources */,
